@@ -1,0 +1,8 @@
+<div class="playlist-container" [class]="provider" [class.selected] = "playlistService.selectedYtPlaylist === playlist.playlist_id || playlistService.selectedSpPlaylist === playlist.playlist_id" (click)="selected()">
+    <img src="{{playlist.artwork}}" alt="playlist-cover" referrerpolicy="no-referrer">
+    <div class="playlist-details">
+        <span>{{playlist.title}}</span>
+        <span>{{playlist.description}}</span>
+        <span>{{playlist.tracks_count}}</span>
+    </div>
+</div>

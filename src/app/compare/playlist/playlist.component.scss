@@ -1,0 +1,27 @@
+@import "../../../styles.scss";
+
+.playlist-container{
+    display: flex;
+    padding-inline: 3px;
+    margin-block: 1rem;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    img{
+        height: 6rem;
+        width: 6rem;
+        border-radius: 3px;
+        align-self: center;
+    }
+    .playlist-details{
+        margin: 0.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &.selected.yt{
+        outline: 3px solid $ytColor;
+    }
+
+    &.selected.sp{
+        outline: 3px solid $spColor;
+    }
+}

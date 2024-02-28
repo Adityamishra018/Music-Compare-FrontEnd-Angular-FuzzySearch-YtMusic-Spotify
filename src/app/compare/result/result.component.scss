@@ -1,0 +1,37 @@
+.result-container{
+    margin: 3rem;
+    min-height: 30vh;
+    position: relative;
+
+    [msComparisionResult] {
+        ul{
+            list-style-type: decimal;
+            margin-top: -0.2rem;
+            padding-inline: 4.5rem;
+
+            ::marker{
+                color: red;
+            }
+        }
+        
+        .sp-count, .yt-count, .sp-missing, .yt-missing, .out-of-order{
+            font-weight: bolder;
+            font-size: large;
+            margin-block: 1rem;
+
+            background-image: linear-gradient(to right,green, red, green);
+            background-size: 10%;
+            background-clip: text;
+            color: transparent;
+        }
+
+        li{
+            line-height: 1.8;
+            background-image: linear-gradient(to right,green, red, green);
+            background-size: 10%;
+            background-clip: text;
+            color: transparent;
+        }
+
+    }
+}

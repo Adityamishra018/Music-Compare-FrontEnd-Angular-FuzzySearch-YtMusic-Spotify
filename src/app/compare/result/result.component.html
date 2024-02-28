@@ -1,0 +1,4 @@
+<div class="result-container">
+    <ms-loader *ngIf="playlistService.isLoading"></ms-loader>
+    <div *ngIf="!playlistService.isLoading" msComparisionResult></div>
+</div>

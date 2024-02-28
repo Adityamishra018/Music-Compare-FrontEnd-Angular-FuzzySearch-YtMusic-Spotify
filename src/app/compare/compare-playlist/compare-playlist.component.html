@@ -1,0 +1,8 @@
+<div class="compare">
+    <ms-playlist-list provider="yt" [playlists]="ytPlaylists"></ms-playlist-list>
+    <ms-playlist-list provider="sp" [playlists]="spPlaylists"></ms-playlist-list>
+</div>
+<button [disabled] = "!playlistService.canCompare()" (click)="Compare()">Compare</button>
+<div #resultDiv>
+    <ms-result></ms-result>
+</div>

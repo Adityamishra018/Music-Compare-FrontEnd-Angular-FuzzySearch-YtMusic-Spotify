@@ -1,0 +1,56 @@
+.search-container{
+    margin: 3rem;
+
+    .search-input{
+        display: block;
+        padding: 0.4rem;
+        width: 50%;
+        margin-block: 2rem ;
+    }
+
+    .checkbox{
+        display: inline-block;
+        margin-right: 2rem;
+        margin-bottom: 3rem;
+
+        input{
+            visibility: hidden;
+            height: 0px;
+            width: 0px;
+        }
+
+        .label-text{
+            margin-left: 0.5rem;
+            vertical-align: bottom;
+        }
+
+        input:checked + .custom-checkbox::after{
+            display: inline-block;
+        }
+    
+    }
+
+    .custom-checkbox{
+        height: 20px;
+        width: 20px;
+        vertical-align: middle;
+        border: 1px solid black;
+        display: inline-block;
+        position: relative;
+
+        &::after{
+            content: "\2713";
+            font-size: 4rem;
+            position: absolute;
+            color: lightcoral;
+            display: none;
+            top: 50%;
+            left : 50%;
+            transform: translate(-50%,-60%);
+        }
+    }
+
+    .tracks{
+        margin-top: 2rem;
+    }
+}

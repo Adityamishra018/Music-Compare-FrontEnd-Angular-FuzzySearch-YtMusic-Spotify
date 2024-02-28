@@ -1,0 +1,19 @@
+<div class="search-container">
+    <div *ngIf="this.counter < 2">fetching data please wait...</div>
+
+    <input class="search-input" #textInput type="text" placeholder="Type any song/artist" [disabled]="this.counter < 2">
+
+    <label class="checkbox" for="yt-check">
+        <input #ytCheck type="checkbox" id="yt-check" checked (change)="update()">
+        <span class="custom-checkbox"></span>
+        <span class="label-text">Youtube</span>
+    </label>
+
+    <label class="checkbox" for="sp-check">
+        <input #spCheck type="checkbox" id="sp-check" checked (change)="update()">
+        <span class="custom-checkbox"></span>
+        <span class="label-text">Spotify</span>
+    </label>
+
+    <ms-tracks *ngFor="let t of this.searchResults" [track]="t"></ms-tracks>
+</div>
