@@ -1,5 +1,6 @@
 <div class="search-container">
     <div *ngIf="this.counter < 2">fetching data please wait...</div>
+    <div *ngIf="this.counter > 2">server unavailable 🤨...</div>
 
     <input class="search-input" #textInput type="text" placeholder="Type any song/artist" [disabled]="this.counter < 2">
 

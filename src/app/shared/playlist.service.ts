@@ -24,6 +24,10 @@ export class PlaylistService {
     return false
   }
 
+  syncPlaylists(){
+    return this.http.post<unknown>(`${this.url}/sync`,undefined)
+  }
+
   GetYoutubePlaylists(){
     return this.http.get<playlistDTO[]>(`${this.url}/playlists/yt`)
   }

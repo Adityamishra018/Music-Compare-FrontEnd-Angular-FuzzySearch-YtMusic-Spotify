@@ -1,0 +1,6 @@
+<div class="sync-playlists">
+    <ms-loader *ngIf="this.isSyncing"></ms-loader>
+    <button *ngIf="!this.isSyncing && !hasSynced && !syncFailed" (click)="sync()" >click to sync latest updates to database</button>
+    <button *ngIf="!this.isSyncing && hasSynced && !syncFailed" class="msg">Database up-to-date 👍</button>
+    <button *ngIf="this.syncFailed" class="msg">Sync failed 😕</button>
+</div>

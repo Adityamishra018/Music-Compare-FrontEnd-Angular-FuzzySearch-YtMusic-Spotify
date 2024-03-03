@@ -1,0 +1,22 @@
+.sync-playlists{
+    margin-block: 4rem;
+    margin-inline: 3rem;
+
+    button{
+        font-weight: bolder;
+        font-size: large;
+        display: block;
+        margin-inline: auto;
+        margin-block: 2rem;
+        background-color: lightblue;
+        border-radius: 0.5rem;
+        width: 60%;
+        height: 5rem;
+        cursor: pointer;
+    }
+
+    .msg{
+        cursor : default;
+        background-color: lightgreen;
+    }
+}

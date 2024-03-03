@@ -8,6 +8,18 @@ header{
         color : black;
     }
 
+    span::after{
+       content: "";
+       display: block;
+       height: 2px;
+       margin-top: 2px;
+       transform: scaleX(1.1);
+    }
+
+    .active > span::after{
+       background-image: linear-gradient(to right, red , green);
+    }
+
     .logo{
         display: flex;
         align-items: center;
@@ -22,13 +34,20 @@ header{
     }
 
     li{
-        margin: 0px 2rem;
-        display: inline;
+        margin-inline: 3rem;
+        display: flex;
+    }
+
+    li > a{
+        display: flex;
+        align-items: center;
     }
 
     ul{
+        align-self: stretch;
         list-style: none;
         display: flex;
+        align-items: stretch;
         gap : 1rem;
     }
 }

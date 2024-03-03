@@ -63,21 +63,27 @@ export class SearchComponent implements OnInit, OnDestroy {
       this.update()
     })
 
-    this.sp$ = this.searchSvc.GetAllSpTracks().subscribe(tracks =>{
-      tracks.forEach((t,i) =>{
-        this.spSearchTracks.push(`${t.title} ${t.artists} ${t.album} ${i}`)
-        this.counter += 1
-      })
-      this.spTracks = tracks
+    this.sp$ = this.searchSvc.GetAllSpTracks().subscribe({
+      next :  tracks =>{
+              tracks.forEach((t,i) =>{
+                this.spSearchTracks.push(`${t.title} ${t.artists} ${t.album} ${i}`)
+                this.counter += 1
+              })
+              this.spTracks = tracks
+              },
+      error : _ =>{this.counter = 3}
     })
 
-    this.yt$ = this.searchSvc.GetAllYtTracks().subscribe(tracks =>{
-      tracks.forEach((t,i) =>{
-        this.ytSearchTracks.push(`${t.title} ${t.artists} ${t.album} ${i}`)
-        this.counter += 1
+    this.yt$ = this.searchSvc.GetAllYtTracks().subscribe({
+      next :  tracks =>{
+              tracks.forEach((t,i) =>{
+                this.ytSearchTracks.push(`${t.title} ${t.artists} ${t.album} ${i}`)
+                this.counter += 1
+              })
+              this.ytTracks = tracks
+              },
+      error : _ => {this.counter = 3}
       })
-      this.ytTracks = tracks
-    })
   }
 
   ngOnDestroy(): void {
