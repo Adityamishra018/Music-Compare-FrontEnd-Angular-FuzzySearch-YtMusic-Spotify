@@ -12,7 +12,6 @@ export class TracksComponent implements OnInit{
   @ViewChild('trackDetails',{static : true}) trackDetail : ElementRef<HTMLElement>
 
   ngOnInit(): void {
-    console.log(this.track)
     if (this.track.provider && this.track.provider === "youtube")
       this.trackDetail.nativeElement.style.backgroundImage = `url('../../../assets/YT_Music.svg.png')`
     else if (this.track.provider && this.track.provider === "spotify")
