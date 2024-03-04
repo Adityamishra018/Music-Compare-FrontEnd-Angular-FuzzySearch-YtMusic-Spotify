@@ -1,27 +1,31 @@
-# MusicCompare
+# Music Compare
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
+## About the project
 
-## Development server
+This project provides front-end for [Music Compare Api Project](https://github.com/Adityamishra018/Music-Compare-Api--Python-FastApi-Spotify-YtMusic-REST) in Angular. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Features
 
-## Code scaffolding
+1. Compare playlists of YtMusic and Spotify.
+2. Search songs across playlists in both Ytmusic and Spotify.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Concepts Covered
 
-## Build
+1. Angular Basics
+2. Angular Routing
+3. Lazy loading
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## How to use ?
 
-## Running unit tests
+1. Setup the backend by first running [Music Compare Api Project](https://github.com/Adityamishra018/Music-Compare-Api--Python-FastApi-Spotify-YtMusic-REST)
+2. Clone this repo
+3. install deps with `npm i`
+4. Update api endpoint details in the `environment.development.ts` located inside `src\environments`
+5. Run the app with `ng serve`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Snaps
 
-## Running end-to-end tests
+![Compare Page](https://drive.google.com/uc?export=view&id=1T1fAX7N7zdEiyKlD7Hq8AC-UD5Vg0wzB)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![Compare Search](https://drive.google.com/uc?export=view&id=1L76hSn9kdvOciDkdButTGkWJHINIGA5K)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
